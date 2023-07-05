@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+float t1,t2,t3,time; // створюємо
+printf("vvedit znachenya 3 wtuki:\n"); // вивожу на екран те що треба 3 значення
+scanf("%f", &t1);
+scanf("%f", &t2);
+scanf("%f", &t3); // останнє значення яке я буду вписувати
+time=(t1 + t2 + t3) / 3; // рахує
+printf("potribno chasu: %.2f\n", time); // виводить результат
+return 0;
+}
