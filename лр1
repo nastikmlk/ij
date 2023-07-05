@@ -1,12 +1,18 @@
 #include <stdio.h>
+#include <windows.h>
 
 int main() {
-float t1,t2,t3,time; // створюємо
-printf("vvedit znachenya 3 wtuki:\n"); // вивожу на екран те що треба 3 значення
-scanf("%f", &t1);
-scanf("%f", &t2);
-scanf("%f", &t3); // останнє значення яке я буду вписувати
-time=(t1 + t2 + t3) / 3; // рахує
-printf("potribno chasu: %.2f\n", time); // виводить результат
+      SetConsoleCP(1251); // для української мови
+  SetConsoleOutputCP(1251); // теж
+
+float time=0; // створюємо змінні
+float numbers[3];
+ printf("Введіть 3 значення: "); // вивід на екран повідомлення
+  for (int i = 0; i < 3; i++) { // щоби зчитати цифри рядком потипу  3 3 3
+  scanf("%f", &numbers[i]);
+  }
+
+time=((1/numbers[0]) + (1/numbers[1]) + (1/numbers[2])); // обраххунок
+printf("Необхідно час: %.2f години\n", time); // вивід результату
 return 0;
 }
